@@ -5,7 +5,7 @@ service:
 
 script:
   - powershell set-executionpolicy unrestricted
-  - powershell ./CICD/hw.ps1
+  # - powershell ./CICD/hw.ps1
   - docker build -t pixpan/steamcmd-wincore .
   - env
 
