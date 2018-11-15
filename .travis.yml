@@ -1,5 +1,7 @@
 os: windows
 language: shell
+service:
+  - docker
 script:
-    - powershell set-executionpolicy unrestricted
-    - powershell ./CICD/hw.ps1
+  - powershell set-executionpolicy unrestricted
+  - powershell ./CICD/hw.ps1
