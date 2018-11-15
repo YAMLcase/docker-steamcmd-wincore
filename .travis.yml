@@ -8,4 +8,7 @@ script:
   # - powershell ./CICD/hw.ps1
   - docker build -t pixpan/steamcmd-wincore .
   - env
+  - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
+  - docker push pixpan/steamcmd-wincore
+
 
