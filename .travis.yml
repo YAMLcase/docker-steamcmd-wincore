@@ -2,4 +2,4 @@ os: windows
 language: shell
 script:
     - powershell set-executionpolicy unrestricted
-    - powershell ./JenCICD/hw.ps1
+    - powershell ./CICD/hw.ps1
