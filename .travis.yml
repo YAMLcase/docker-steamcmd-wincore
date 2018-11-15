@@ -2,6 +2,8 @@ os: windows
 language: shell
 service:
   - docker
-script:
+
+before_install:
   - powershell set-executionpolicy unrestricted
   - powershell ./CICD/hw.ps1
+  - docker pull microsoft/windowsservercore:1803
