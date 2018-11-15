@@ -1,0 +1,6 @@
+os: windows
+language: shell
+script:
+    - powershell write-host "hello world"
+    - powershell set-executionpolicy unrestricted
+    - powershell ./Jenkins/hw.ps1
