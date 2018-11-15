@@ -4,6 +4,7 @@ service:
   - docker
 
 before_install:
-  - powershell set-executionpolicy unrestricted
-  - powershell ./CICD/hw.ps1
-  - docker build -t pixpan/steamcmd-wincore .
+  # - powershell set-executionpolicy unrestricted
+  # - powershell ./CICD/hw.ps1
+  # - docker build -t pixpan/steamcmd-wincore .
+
