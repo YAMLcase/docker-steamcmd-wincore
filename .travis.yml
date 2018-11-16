@@ -3,6 +3,7 @@ language: shell
 service:
   - docker
 
+if: tag IS present
 script:
   # - powershell set-executionpolicy unrestricted
   # - powershell ls
