@@ -5,10 +5,9 @@ service:
 
 script:
   - powershell set-executionpolicy unrestricted
-  # - powershell ./CICD/hw.ps1
+  - powershell ./CICD/getenv.ps1
+  - git log
   - docker build -t pixpan/steamcmd-wincore .
   - env
   - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
   - docker push pixpan/steamcmd-wincore
-
-
