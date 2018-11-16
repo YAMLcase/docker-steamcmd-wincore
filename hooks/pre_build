@@ -1,3 +1,4 @@
 #!/bin/bash
 
 echo "from pre_build"
+PUSH=false
