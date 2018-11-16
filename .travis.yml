@@ -3,9 +3,15 @@ language: shell
 service:
     - docker
 
-script:
-    # - powershell set-executionpolicy unrestricted
-    - docker build -t "pixpan/steamcmd-wincore" .
-    - docker tag pixpan/steamcmd-wincore "pixpan/steamcmd-wincore:$TRAVIS_BUILD_NUMBER"
-    - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
-    - docker push "pixpan/steamcmd-wincore"
+stages:
+    - build
+
+jobs:
+    include:
+        - stage: build
+            script:
+                # - powershell set-executionpolicy unrestricted
+                - docker build -t "pixpan/steamcmd-wincore" .
+                - docker tag pixpan/steamcmd-wincore "pixpan/steamcmd-wincore:$TRAVIS_BUILD_NUMBER"
+                - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
+                - docker push "pixpan/steamcmd-wincore"
