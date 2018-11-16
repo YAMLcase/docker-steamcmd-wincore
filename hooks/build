@@ -1,5 +1,3 @@
 #!/bin/bash
 
-echo "from build"
-printenv
-PUSH=false
+echo "build is disabled at DockerHub until they support Windows Containers"

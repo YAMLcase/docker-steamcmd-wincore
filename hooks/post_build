@@ -1,4 +1,0 @@
-#!/bin/bash
-
-echo "from post_build"
-PUSH=false
