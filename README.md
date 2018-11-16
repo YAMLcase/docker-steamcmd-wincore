@@ -11,6 +11,7 @@ This Docker Image is designed to be a minimal reference image for other Docker I
  FROM pixpan/steamcmd-wincore
  ```
  
+ 
  The project [pixpan/space-engineers](https://hub.docker.com/r/pixpan/space-engineers/) is a good reference for usage.
 
 ## Structure
@@ -20,7 +21,7 @@ This image adds the following components to an otherwise vanilla [microsoft/wind
 [Chocolatey](https://chocolatey.org) is *the* package manager for Windows.
 
 ### SteamCMD
-Chocolatey is used to install [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) from the [Chocolatey SteamCMD](https://chocolatey.org/packages/steamcmd) Package.
+Chocolatey is used to install [SteamCMD](https://developer.valvesoftware.com/wiki/SteamCMD) from the [Chocolatey SteamCMD](https://chocolatey.org/packages/steamcmd) Package and is stored where Chocolatey normally stores things.
 
 Since this is an image used to create other images, there are no applicable volume or port mappings.
 

@@ -9,6 +9,6 @@ script:
   # - powershell ls
   # - powershell pwd
   # - powershell $(.\CICD\getenv.ps1)
-  - docker build -t pixpan/steamcmd-wincore .
+  - docker build -t "pixpan/steamcmd-wincore:$TRAVIS_BUILD_NUMBER" .
   - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
-  - docker push pixpan/steamcmd-wincore
+  - docker push "pixpan/steamcmd-wincore:$TRAVIS_BUILD_NUMBER"
