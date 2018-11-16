@@ -16,3 +16,5 @@ stage: build
     - docker build -t "pixpan/steamcmd-wincore:$TRAVIS_BUILD_NUMBER" .
     - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
     - docker push "pixpan/steamcmd-wincore:$TRAVIS_BUILD_NUMBER"
+
+    
