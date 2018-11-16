@@ -14,7 +14,4 @@ RUN powershell -Command \
 RUN choco install -y steamcmd
 
 # Run Steamcmd for the first time to update itself.
-RUN powershell steamcmd.exe +login anonymous +quit
-
-# If above RUN throws bogus errors, try the one below:
-# RUN powershell $(steamcmd.exe +login anonymous +quit; powershell exit 0)
+RUN powershell $(steamcmd.exe +login anonymous +quit; powershell exit 0)
