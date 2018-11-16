@@ -13,8 +13,8 @@ RUN powershell -Command \
 # Install SteamCMD
 RUN choco install -y steamcmd
 
-# Create directory for SteamCMD
-RUN if not exist "C:\Steam" mkdir C:\Steam
-
 # Run Steamcmd for the first time to update itself.
-RUN powershell $(steamcmd.exe +login anonymous +quit; powershell exit 0)
+RUN powershell steamcmd.exe +login anonymous +quit
+
+# If above RUN throws bogus errors, try the one below:
+# RUN powershell $(steamcmd.exe +login anonymous +quit; powershell exit 0)
