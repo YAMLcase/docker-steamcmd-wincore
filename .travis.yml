@@ -5,7 +5,8 @@ service:
 
 script:
   - powershell set-executionpolicy unrestricted
-  - powershell ./CICD/getenv.ps1
+  - powershell pwd
+  - powershell $(.\CICD\getenv.ps1)
   - git log
   - docker build -t pixpan/steamcmd-wincore .
   - env
