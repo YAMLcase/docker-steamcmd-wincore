@@ -3,9 +3,6 @@ language: shell
 service:
     - docker
 
-stages:
-    - build
-
 jobs:
     include:
         - stage: build
