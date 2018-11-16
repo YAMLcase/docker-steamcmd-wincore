@@ -3,8 +3,7 @@ language: shell
 service:
   - docker
 
-# if: branch = master
-if: tag IS present
+if: branch = master
 
 script:
 # - powershell set-executionpolicy unrestricted
