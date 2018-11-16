@@ -1,14 +1,9 @@
 os: windows
 language: shell
 service:
-  - docker
+    - docker
 
-stages:
-  - build
-
-stage: build
-  #if: tag IS present
-  script:
+script:
     # - powershell set-executionpolicy unrestricted
     # - powershell ls
     # - powershell pwd
@@ -17,4 +12,3 @@ stage: build
     - echo "$docker_password" | docker login -u "$docker_username" --password-stdin
     - docker push "pixpan/steamcmd-wincore:$TRAVIS_BUILD_NUMBER"
 
-    
