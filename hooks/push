@@ -1,0 +1,5 @@
+#!/bin/bash
+
+echo "from push"
+export PUSH=false
+printenv
