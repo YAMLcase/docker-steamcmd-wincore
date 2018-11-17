@@ -10,7 +10,7 @@ This Docker Image is designed to be a minimal reference image for other Docker I
  ```
  FROM pixpan/steamcmd-wincore
  ```
- </br>
+
  
  The project [pixpan/space-engineers](https://hub.docker.com/r/pixpan/space-engineers/) is a good reference for usage.
 
