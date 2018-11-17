@@ -10,7 +10,7 @@ This Docker Image is designed to be a minimal reference image for other Docker I
  ```
  FROM pixpan/steamcmd-wincore
  ```
- 
+ </br>
  
  The project [pixpan/space-engineers](https://hub.docker.com/r/pixpan/space-engineers/) is a good reference for usage.
 
@@ -27,4 +27,4 @@ Since this is an image used to create other images, there are no applicable volu
 
 
 ## Automated Build
-This automated build is done on Travis-CI as it is (currently) the only free-to-use Open Source platform that supports Windows build machines.  If you wish to fork this project, be sure to create `$docker_username` and `$docker_password` to Travis as secret environment variables.
+This automated build is done on Travis-CI as it is (currently) the only free-to-use Open Source platform that supports Windows build machines.  If you wish to fork this project, be sure to create `$docker_username` and `$docker_password` on Travis as secret environment variables.
